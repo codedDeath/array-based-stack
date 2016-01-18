@@ -10,7 +10,8 @@ class stack                     // defining the stack class
   int size;
   int *S;
 public:
-	void newStack(int size){                               //creating a new stack
+	void newStack(int a){ 
+	size = a;                                                //creating a new stack
 	S = new int[size];
 	top = -1;
 	}
@@ -20,13 +21,14 @@ public:
 		return (top == -1);
 	}
 
-	void Push(int value)                                   //pushing an element in stack
+void Push(int value)                                           //pushing an element as well as increasing the size if needed
 	{
-		if (top == (size-1))                                    // resizing to twice the size if needed
+		if (top == (size-1))
 		{
+			size = 2*size;
 			int *A = NULL;
-			A = new int[2*size];
-			for (int i=0;i<size;i++)
+			A = new int[size];
+			for (int i=0;i<(size/2);i++)
 			{
 				A[i] = S[i];
 			}
