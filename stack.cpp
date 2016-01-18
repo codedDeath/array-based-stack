@@ -11,7 +11,6 @@ class stack                     // defining the stack class
   int *S;
 public:
 	void newStack(int size){                               //creating a new stack
-    int *S= NULL;
 	S = new int[size];
 	top = -1;
 	}
