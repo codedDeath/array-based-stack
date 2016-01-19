@@ -57,5 +57,6 @@ void Push(int value)                                           //pushing an elem
 		{
 			cout << S[i];
 		}
+		cout << endl;
 	}
 };
