@@ -42,6 +42,7 @@ void Push(int value)                                           //pushing an elem
 	{
 		if (top == -1)
                   throw string("Stack is empty");
+            S[top] = NULL;
             top--;
 	}
 
